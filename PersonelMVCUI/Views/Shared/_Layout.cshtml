@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Yeni";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    @Html.Partial("_Navbar")
+
+    <div class="container">
+
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
