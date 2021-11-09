@@ -58,5 +58,18 @@ namespace PersonelMVCUI.Controllers
      
             return View("DepartmanForm", model);
         }
+        public ActionResult Sil(int id)
+        {
+            var silinecekDepartman = db.Departman.Find(id);
+            if (silinecekDepartman == null)
+            
+                return HttpNotFound();
+            
+                db.Departman.Remove(silinecekDepartman);
+
+            db.SaveChanges();
+            
+            return RedirectToAction("Index");
+        }
     }
 }
