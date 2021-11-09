@@ -50,7 +50,9 @@ namespace PersonelMVCUI.Controllers
         public ActionResult Guncelle(int id)
         {
             var model = db.Departman.Find(id);
+
             if (id == null)
+                
                 return HttpNotFound();           
 
      
